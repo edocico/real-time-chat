@@ -1,10 +1,15 @@
 <template>
   <main class="AppMain d-flex">
     <div class="sidebar">
-      <div>
+      <div class="container py-3">
         <h3>Join a chat</h3>
         <label for="username">username</label>
-        <input type="text" placeholder="username" name="username" />
+        <input
+          type="text"
+          placeholder="username"
+          name="username"
+          v-model="username"
+        />
         <label for="room-id">room ID</label>
         <input type="text" placeholder="room id" name="room-id" />
       </div>
@@ -29,7 +34,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      username: "",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
