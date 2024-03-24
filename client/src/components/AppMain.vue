@@ -1,15 +1,27 @@
 <template>
   <main class="AppMain d-flex">
-    <div class="sidebar">side</div>
+    <div class="sidebar">
+      <div>
+        <h3>Join a chat</h3>
+        <label for="username">username</label>
+        <input type="text" placeholder="username" name="username" />
+        <label for="room-id">room ID</label>
+        <input type="text" placeholder="room id" name="room-id" />
+      </div>
+    </div>
 
     <div class="app-core d-flex flex-column">
       <div class="display-chat flex-grow-1">
         <p>aaaaaa</p>
       </div>
       <div class="input-chat">
-        <form action="" method="POST">
-          <input type="text" />
-          <input type="submit" value="invia" />
+        <form action="" method="POST" class="d-flex gap-5">
+          <input type="text" name="text-chat" class="input-text" />
+          <input
+            type="submit"
+            class="btn btn-success send-btn"
+            contenteditable="true"
+          />
         </form>
       </div>
     </div>
@@ -43,6 +55,19 @@ export default {};
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .input-text {
+        width: 400px;
+        max-width: 400px;
+        border-radius: 20px;
+        border: transparent;
+        box-shadow: 0px 0px 5px black;
+        padding-left: 10px;
+      }
+
+      .send-btn {
+        box-shadow: 0px 0px 5px black;
+      }
     }
   }
 }
